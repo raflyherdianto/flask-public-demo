@@ -1,0 +1,11 @@
+services:
+  web:
+    image: raflyherdianto25/flask-public-demo:latest
+    container_name: flask-public-web
+    restart: unless-stopped
+    networks:
+      - shared-network
+
+networks:
+  shared-network:
+    external: true
