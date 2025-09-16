@@ -43,7 +43,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             set -e
-            cd /flask-public
+            cd ~/flask-public
             docker compose pull
             docker compose up -d
             docker image prune -f
